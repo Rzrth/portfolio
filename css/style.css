@@ -1,0 +1,910 @@
+/* Begin Fonts */
+
+@font-face {
+  font-family: 'PressStart2P';
+  src:  url('../fonts/PressStart2P-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'PinyonScript';
+  src:  url('../fonts/PinyonScript-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  src:  url('../fonts/Cinzel-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src:  url('../fonts/Montserrat-Bold.ttf');
+}
+
+/* End Fonts */
+
+/* Begin Global */
+
+:root{
+	--primary-color: yellowgreen; /* CSS Global vars */
+	--secondary-color: #222222;
+}
+
+html{
+	scroll-behavior: smooth;
+	scrollbar-color: #181a1b var(--secondary-color);
+	overflow-x: hidden;
+}
+
+body{
+	background-color: var(--secondary-color);
+	width: 100%;
+	margin: auto;
+	font-family: Cinzel;
+	line-height: 1.5;
+	letter-spacing: 0.12px;
+	word-spacing: 0.16px;
+}
+
+header{
+	position: relative;
+	width: 100%;
+}
+
+div,
+h1,
+h2,
+p,
+a,
+span{
+	color: white;
+}
+
+h3,
+.discreet-link:hover,
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies,
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized .hobbies .picto,
+section#contact div.contact-socials .ico-social{
+	color: var(--primary-color);
+}
+
+main{
+	position: relative;
+	top: 0;
+}
+
+section{
+	position: relative;
+}
+
+ul{
+	list-style: none;
+}
+
+section#contact div.contact-socials .ico-social,
+.discreet-link{
+	text-decoration: none;
+}
+
+.discreet-link:hover{
+	transition: all 1s;
+}
+
+section h2{
+	font-weight: bolder;
+	text-align: center;
+}
+
+.noscript {
+	background-color: black;
+	width: 100%;
+	display: block;
+	position: fixed;
+	top: 55px;
+	z-index: 2;
+	text-align: center;
+}
+
+header svg#bottomnav{	
+	top: 55px;
+	position: fixed;
+	width: 100vw;
+	height: 4px;
+	z-index: 2;
+}
+
+header svg#progresscontainer{	
+	transition: all 3s;
+	top: 0;
+	position: fixed;
+	height: 4px;
+	width: 0px;
+	z-index: 2;
+}
+
+header svg line.progressbar{	
+	stroke: var(--primary-color);
+	stroke-width: 4;
+}
+
+footer{
+	display: block;
+	background-color: #181a1b;
+}
+
+footer #footer-content{
+	text-align: center;
+	padding: 1%;
+}
+
+/* End Global */
+
+/* Begin Desktop */
+
+/* Begin Nav bar */
+nav{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 100vw; /* vw is based on the width of the viewport. Used here because of the fixed nav who also use viewport */
+	z-index: 1;
+	background-color: var(--secondary-color);
+	transition: transform 1s;
+}
+
+nav a#logo-desktop{
+	margin-left: 2%;
+	font-family: Montserrat;
+}
+
+nav div#container-mobile-logo,
+nav span#hamburger,
+nav span#cross,
+nav span#close-menu,
+nav label#hamburger-label,
+nav input#hamburger-click,
+nav input#languages-click{
+	display: none
+}
+
+nav ul#main-menu{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding: 0;
+}
+
+nav ul#main-menu:lang(en),
+nav ul#main-menu:lang(ja){
+	width: 500px;
+}
+
+nav ul#main-menu:lang(ja){
+	width: 640px;
+}
+
+nav ul#main-menu:lang(fr){
+	width: 650px;
+}
+
+nav ul#main-menu ul#dropdown-top div.dropdown-menu{
+	overflow: hidden;
+	position: absolute;
+	box-shadow: 4px 4px 0 0 #181a1b;
+	z-index: 3;
+	height: 0px;
+	transition: all 1s;
+	width: 93px;
+}
+
+nav ul#main-menu ul#dropdown-top:lang(en),
+nav ul#main-menu ul#dropdown-top:lang(fr){
+	width: 90px;
+	padding: 0;
+}
+
+nav ul#main-menu ul#dropdown-top:lang(ja){
+	width: 40px;
+	padding: 0;
+}
+
+nav #languages-click:checked ~ ul#main-menu ul#dropdown-top div.dropdown-menu{
+	height: 60px;
+	background-color: var(--secondary-color);
+}
+
+nav ul#main-menu div.dropdown-menu ul{
+	text-align: center;
+	margin: 10px auto;
+	padding: 0;
+	width: 100%;
+}
+
+nav span#close-menu img{	
+	width: 25px;
+}
+
+nav svg{	
+	position: relative;
+	width: 100%;
+	height: 4px;
+	top: 3px;
+}
+
+nav svg line.right{	
+	transform: translateX(100%);
+	transition: animation 5s;
+	stroke: var(--primary-color);
+	stroke-width: 4;
+	animation: stroke-nav-slide 5s forwards;
+}
+
+@keyframes stroke-nav-slide{
+	50%{transform: translateX(0%);stroke-width: 2;}
+	75%{transform: translateX(0%);stroke-width: 3;}
+	100%{transform: translateX(0%);stroke-width: 2;}
+}
+
+nav ul#main-menu li svg {	
+	display: none;
+}
+
+@keyframes stroke-nav-slide-mobile{
+	100%{transform: translateX(0%);stroke-width: 2;}
+}
+
+/* End Nav bar */
+
+/* Begin Section Top */
+
+section#top{
+	background-image: url("../img/creator.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	animation: background-appear 10s;
+}
+
+@keyframes background-appear{
+	0%{opacity: 0;}
+	100%{opacity: 100;}
+}
+
+section#top div#top-creator{
+	display: block;
+	position: relative;
+	height: 600px;
+}
+
+section#top div#top-creator div#presentation {
+	top: 10%;
+	position: relative;
+	display: block;
+	height: 40px;
+	width: 100%;
+	text-align: right;
+}
+
+section#top div#top-creator div#presentation h1{
+	display: inline-block;
+	white-space: nowrap;
+	font-size: 500%;
+	animation: typing-text 5.5s steps(30, end) forwards;
+	position: relative;
+	overflow: hidden;
+	font-family: Montserrat;
+}
+
+@keyframes typing-text {
+	from{width: 0;}
+	to {width: 100%;}
+}
+
+section#top div#top-creator p{
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	font-style: italic;
+	font-size: 25px;
+}
+
+section#top div#top-creator p:nth-of-type(1):lang(en),
+section#top div#top-creator p:nth-of-type(1):lang(fr){
+	font-family: PinyonScript;
+	text-shadow: 2px 2px var(--secondary-color);
+}
+
+section#top div#top-creator p:nth-of-type(1):lang(ja){
+	font-family: inherit;
+	top: 90%;
+	animation: scroll-down-top infinite 3s;
+}
+
+section#top div#top-creator p:nth-of-type(2):lang(en),
+section#top div#top-creator p:nth-of-type(2):lang(fr){
+	top: 90%;
+	animation: scroll-down-top infinite 3s;
+}
+
+@keyframes scroll-down-top{
+	0%{font-size: 20px;}
+	50%{font-size: 25px;}
+	100%{font-size: 20px;}
+}
+
+/* End Section Top */
+
+/* Begin Section about */
+
+section#about div#about-describe{
+	padding: 50px;
+	text-align: center;
+}
+
+section#about div#about-describe p{
+	color: var(--secondary-color);
+}
+
+@keyframes double-transition{
+	0%{transform: translateX(100%); color: transparent;}
+	15%{transform: translateX(0%);background-color: #181a1b; color: transparent;}
+	50%{transform: translateX(100%);background-color: #181a1b; color: transparent;}
+	100%{background-color: var(--primary-color); transform: translateX(0%);}
+}
+
+
+/* End Section about */
+
+/* Begin Section hobbies */
+
+section#hobbies div#hobbies-background{
+	background-image: url("../img/background-polygon.jpg"); /* Important when you have a section that it can be very large or long because of multiple display device to have a background that the background repeat itself. You can also save filesize in the way to optimize the refresh rate of the page */
+	background-size: 100%;
+}
+
+section#hobbies div#hobbies-background div#hobbies-container{
+	width: 80%;
+	margin: auto;
+}
+
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies{
+	width: 100%;
+}
+
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-left{
+	position: relative;
+	margin-left: 120%;
+	display: inline-block;
+}
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized .hobbies .hobbies-picto-container{
+	display: inline-block;
+	width: 20%;
+}
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized .hobbies .hobbies-description-container{
+	display: inline-block;
+	width: 70%;
+	vertical-align: top;
+}
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized .hobbies .picto{
+	font-size: 150px;
+}
+
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized div.hobbies-right{
+    position: absolute;
+	text-align: right;
+	right: 120%;
+	display: inline-block;
+}
+
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:nth-of-type(1) div.hobbies-left{
+	transition: all 2s 1s;
+}
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:nth-of-type(2) div.hobbies-right{
+	transition: all 2s 2s;
+}
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:nth-of-type(3) div.hobbies-left{
+	transition: all 2s 3s;
+}
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:nth-of-type(4) div.hobbies-right{
+	transition: all 2s 4s;
+}
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:nth-of-type(5) div.hobbies-left{
+	transition: all 2s 5s;
+}
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:nth-of-type(6) div.hobbies-right{
+	transition: all 2s 6s;
+}
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:nth-of-type(7) div.hobbies-left{
+	transition: all 2s 7s;
+}
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:nth-of-type(8) div.hobbies-right{
+	transition: all 2s 8s;
+}
+
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized{
+	width: 100%;
+	height: 200px;
+	position: relative;
+}
+
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:first-of-type:lang(en),
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:first-of-type:lang(fr){
+	font-family: PressStart2P;
+}
+
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:first-of-type:lang(ja){
+	font-family: inherit;
+}
+
+/* End Section hobbies */
+
+/* Begin Section skills */
+
+section#skills div.skills-container{
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	width: 80%;
+	justify-content: space-between;
+}
+
+section#skills div.skills-container div.skills-child p{
+	overflow: hidden;
+	max-height: 0%;
+}
+
+section#skills div.skills-container div.skills-child svg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;	
+}
+
+section#skills div.skills-container div:hover p{
+	animation: skills-text-appear 9s 1 forwards;
+}
+
+section#skills div.skills-container div:hover div.container-hover{
+	animation: skill-logo-movemnent 3s 1 forwards;
+}
+
+section#skills div.skills-container > div:hover svg line,
+section#skills div.skills-container > div svg line{
+	stroke: var(--primary-color);
+	stroke-width: 2;
+}
+
+section#skills div.skills-container > div svg line.top{ 		/* when the mouse is not over skills */
+ 	transform: translateX(-100%);
+	transition: transform 0.25s 0.75s;
+}
+section#skills div.skills-container > div svg line.left{
+ 	transform: translateY(100%);
+	transition: transform 0.25s 0.0s;
+}
+section#skills div.skills-container > div svg line.bottom{
+	transform: translateX(101%);
+	transition: transform 0.25s 0.25s;
+}
+section#skills div.skills-container > div svg line.right{
+	transform: translateY(-100%);
+	transition: transform 0.25s 0.50s;
+}
+
+section#skills div.skills-container > div:hover svg line.top{	/* when the mouse is over skills */
+ 	transform: translateX(0%);
+	transition: transform 0.5s 0.0s;
+}
+section#skills div.skills-container > div:hover svg line.left{
+ 	transform: translateY(0%);
+	transition: transform 0.5s 1.5s;
+}
+section#skills div.skills-container > div:hover svg line.bottom{
+	transform: translateX(0%);
+	transition: transform 0.5s 1s;
+}
+section#skills div.skills-container > div:hover svg line.right{
+	transform: translateY(0%);
+	transition: transform 0.5s 0.5s;
+}
+
+@keyframes skills-text-appear {
+  	0% { max-height: 0%; opacity: 0%;}
+	100%{max-height: 100%; opacity: 100%;}
+}
+
+@keyframes skill-logo-movemnent {
+  	0% {opacity: 100%;}
+	100%{top: 0%; opacity: 25%;}
+}
+
+section#skills div.skills-container > div {
+	text-align: left;
+	width: 46%;
+	background-color: #181a1b;
+	padding: 15px;
+	margin-top: 2%;
+	position: relative;
+}
+
+section#skills div.skills-container div.montage img#montage {
+	opacity: 0%;
+	width: 0%;
+	position: absolute;
+	height: 0%;
+	top: 0;
+	left: 0;
+}
+
+section#skills div.skills-container div.montage:hover img#montage:lang(en),
+section#skills div.skills-container div.montage:hover img#montage:lang(fr){
+	width: 100%;
+	height: 100%;
+	opacity: 30%;
+	animation: content-disapear 3s 3s forwards;
+}
+
+@keyframes content-disapear {
+  	to {opacity: 0%;}
+}
+
+section#skills div.skills-container div.skills-child h3 {
+	top: 0%;
+	position: absolute;
+}
+
+section#skills div.skills-container div.skills-child div.container-hover{
+	position: relative;
+	margin: auto;
+	width: 100%;
+	top: 35%;
+	text-align: center;
+}
+
+section#skills div.skills-container div.skills-child div.container-hover img.skill-logo{
+	height: 128px;
+	position: relative;
+	margin: auto;
+	display: block;
+}
+
+section#skills div.skills-container div:hover span.skills-how{
+	opacity: 0%;
+}	
+
+section#skills div.skills-container div.skills-child p span.skills-title{
+	color: var(--primary-color);
+}
+
+/* End Section skills */
+
+/* Begin Section contact */
+
+section#contact div.contact-introduction p{
+	text-align: center;
+	margin: auto 10px 20px 10px;
+}
+
+section#contact div.contact-socials{
+	display: flex;
+	justify-content: space-evenly;
+	padding-bottom: 5%;
+}
+
+section#contact div.contact-socials .ico-social{
+	font-size: 80px;
+}
+
+/* End Section contact */
+
+/* Begin Section works */
+
+section#works div#works-container #works-introduction{
+	text-align:center;
+}
+
+section#works div#works-container div#all-works-container{
+	display:flex;
+    justify-content: space-evenly;
+	flex-wrap: wrap;
+    max-width: 100%;
+}
+
+section#works div#works-container div#all-works-container .work-container{
+	width:400px;
+	margin-top: 10px;
+}
+
+section#works div#works-container div#all-works-container .work-container .work-title h3{
+	color: var(--primary-color);
+	text-align:center;
+}
+
+section#works div#works-container div#all-works-container .work-container .work-img img{
+	width:400px;
+	height:230px;
+}
+
+section#works div#works-container div#all-works-container .work-container .work-buttons{
+	display: flex;
+    justify-content: space-around;
+}
+
+section#works div#works-container div#all-works-container .work-container .work-buttons .button-mobile,
+section#works div#works-container div#all-works-container .work-container .work-buttons .button-tablet,
+section#works div#works-container div#all-works-container .work-container .work-buttons .button-4k{
+	width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+section#works div#works-container div#all-works-container .work-container .work-buttons .button-mobile a,
+section#works div#works-container div#all-works-container .work-container .work-buttons .button-tablet a,
+section#works div#works-container div#all-works-container .work-container .work-buttons .button-4k a{
+	color: var(--primary-color);
+	text-decoration: none;
+}
+
+/* End Section works */
+
+/* End Desktop */
+
+/* Begin Media Queries */
+
+/* Mobiles */
+@media only screen and (max-device-width : 480px) {
+	.picto{
+		font-size: 25px;
+	}
+	nav{
+		top: 0;
+		overflow: visible;
+		height: 80px;
+	}
+	nav label#hamburger-label{
+		display: block;
+	}
+	nav a#logo-desktop,
+	nav svg#bottomnav,
+	section#top div#top-creator p,
+	section#skills div.skills-container div.montage img#montage{
+		display: none;
+	}
+	nav div#container-mobile-logo{
+		width: 100%;
+		display: flex;
+		margin: auto 0;
+		justify-content: center;
+		padding-top: 10px;
+	}
+	nav a#logo-mobile{
+		display: block;
+		width: 50px;
+	}
+	nav a#logo-mobile img{
+		width: 50px;
+	}
+	nav ul#main-menu li{
+		width: 100%;
+		text-align: center;
+		margin-bottom: 2px;
+	}
+	nav ul#main-menu li svg {	
+		display: block;
+	}
+	nav #hamburger-click:checked ~ ul#main-menu > li svg line.right-mobile{	
+		transform: translateX(100%);
+		transition: animation 5s;
+		stroke: var(--primary-color);
+		stroke-width: 2;
+		animation: stroke-nav-slide-mobile 2s forwards;
+	}
+	nav ul#main-menu ul#dropdown-top{
+		position: absolute;
+		right: 10px;
+		top: 22px;
+	}
+	nav span#hamburger{
+		display: block;
+		position: absolute;
+		top: 22px;
+		left: 15px;
+	}
+	nav span#cross{	
+		position: absolute;
+		top: 22px;
+		left: 15px;
+	}
+	nav span#close-menu{
+		display: block;
+		position: relative;
+		text-align: center;
+	}
+	nav ul#main-menu{
+		height: 0px;
+		overflow: hidden;
+		width: 100%;
+		transition: all 1s;
+		background-color: var(--secondary-color);
+	}
+	nav #hamburger-click:checked ~ ul#main-menu{
+		transition: all 1s;
+		height: 200px;
+		overflow: visible;
+		width: 100%;
+	}
+	nav #hamburger-click:checked ~ label span#cross{
+		display:block;
+	}
+	nav #hamburger-click:checked ~ label span#hamburger{
+		display:none;
+	}
+	nav #languages-click:checked ~ ul#main-menu ul#dropdown-top div.dropdown-menu:lang(ja),
+	nav ul#main-menu ul#dropdown-top div.dropdown-menu:lang(ja){
+		right: 0;
+	}
+	section#top div#top-creator div#presentation{
+		text-align: center;
+		top: 66px;
+	}
+	section#top div#top-creator div#presentation h1 {
+		font-size: 25px;
+		display: initial;
+		white-space: unset;
+		animation: 0;
+		width: 100%;
+	}	
+	section#top{
+		margin-top: 10px;
+		background-image: url("../img/creator-mobile.jpg");
+	}
+	section#about div#about-describe{
+		background-color: var(--primary-color);
+		padding: 30px;
+	}
+	section#hobbies div#hobbies-background div#hobbies-container{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		margin: auto;
+	}
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized{
+		height: auto;
+	}
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized .hobbies .hobbies-picto-container{
+		width: 100%;
+	}
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized .hobbies .hobbies-description-container{
+		width: 100%;
+	}
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized .hobbies-right,
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized .hobbies-right .hobbies-picto-container,
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized .hobbies-right .hobbies-description-container{
+		transform: scaleY(-1); /* Used to reverse hobbies on mobile or tablet screen in a way to sort hobbies in the right order */
+	}
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized{
+		height: auto;
+	}
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized div.hobbies-left,
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized div.hobbies-right {
+		width: 100%;
+		margin: auto;
+		right: 0;
+		text-align: center;
+		position: relative;
+	}
+	section#skills div.skills-container{
+		justify-content: center;
+	}
+	section#skills div.skills-container div.skills-child div.container-hover{
+		top: 0;
+	}
+	section#skills div.skills-container > div{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	section#skills div.skills-container div.skills-child p{
+		max-height: 100%;
+	}
+	section#skills div.skills-container div.skills-child img.skill-logo{
+		top:0%;
+		left:0%;
+		position: relative;
+		opacity: 25%;
+		max-width: 100%;
+	}
+	section#skills div.skills-container span.skills-how{
+		display: none;
+	}
+	section#contact div.contact-socials {
+		flex-direction: column;
+		text-align: center;
+	}
+	section#contact div.contact-socials .ico-social {
+		padding-bottom: 10%;
+	}
+}
+
+/* Tablets  */
+@media only screen and (min-device-width : 481px) and (max-device-width : 821px){
+	nav a#logo-desktop,
+	nav ul#main-menu label#circle-up-mobile-container,
+	nav svg#bottomnav,
+	section#top div#top-creator p:nth-of-type(2),
+	section#skills div.skills-container span.skills-how,
+	section#skills div.skills-container div.montage img#montage{
+		display: none;
+	}
+	nav div#container-mobile-logo{
+		width: 100%;
+		display: flex;
+		margin: auto 0;
+		justify-content: center;
+		padding-top: 10px;
+	}
+	nav a#logo-mobile{
+		display: block;
+		width: 50px;
+	}
+	nav a#logo-mobile img{
+		width: 50px;
+	}
+	nav ul#main-menu:lang(en), 
+	nav ul#main-menu:lang(ja),
+	nav ul#main-menu:lang(fr){
+		width: 100%;
+	}
+	section#top div#top-creator div#presentation h1 {
+		white-space: unset;
+		animation: 0;
+		width: 100%;
+	}	
+	section#about div#about-describe{
+		background-color: var(--primary-color);
+		padding: 30px;
+	}
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized .hobbies .hobbies-picto-container{
+		width: 100%;
+	}
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized .hobbies .hobbies-description-container{
+		width: 100%;
+	}
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized .hobbies-right,
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized .hobbies-right .hobbies-picto-container,
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized .hobbies-right .hobbies-description-container{
+		transform: scaleY(-1);
+	}
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized{
+		height: auto;
+	}
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized div.hobbies-left,
+	section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized div.hobbies-right {
+		width: 100%;
+		margin: auto;
+		right: 0;
+		text-align: center;
+		position: relative;
+	}
+	section#skills div.skills-container > div{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	section#skills div.skills-container div.skills-child p{
+		max-height: 100%;
+	}
+	section#skills div.skills-container{
+		justify-content: center;
+	}
+	section#skills div.skills-container div.skills-child img.skill-logo{
+		top:0%;
+		left:0%;
+		position: relative;
+		opacity: 25%;
+	}
+	section#skills div.skills-container div.skills-child div.container-hover{
+		top: 0;
+	}
+}
+
+/* End Media Queries */

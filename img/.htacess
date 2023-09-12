@@ -1,0 +1,23 @@
+order deny,allow
+deny from all
+allow from 127.0.0.1
+
+<Files ~ "^\.htaccess">
+Order allow,deny
+Deny from all
+</Files>
+
+<Files creator.jpg">
+Order allow,deny
+Deny from all
+</Files>
+
+<Files film.jpg">
+Order allow,deny
+Deny from all
+</Files>
+
+<Files creator-mobile.jpg">
+Order allow,deny
+Deny from all
+</Files>

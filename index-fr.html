@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+
+<!-- Oh ! I see that you are interested about the source code hmm ? Enjoy then !
+-->
+
+<html lang="fr">
+
+<head>
+	
+	<meta charset="UTF-8">
+	
+	<link type="text/css" href="css/style.css" rel="stylesheet"> <!-- Used to import CSS in the HTML page-->
+	<link type="text/css" href="css/icomoon.css" rel="stylesheet">
+	
+	<script src="js/jquery.min.js"></script> <!-- Used to import JS scripts in the HTML page-->
+	<script src="js/scripts.js"></script>
+	
+	<link rel="alternate" hreflang="en" href="https://manuintheweb.pagesperso-orange.fr/index.html" /> <!-- Used for multilanguages sites-->
+	<link rel="alternate" hreflang="fr" href="https://manuintheweb.pagesperso-orange.fr/index-fr.html" />
+	<link rel="alternate" hreflang="ja" href="https://manuintheweb.pagesperso-orange.fr/index-jp.html" />
+	
+	<meta name="author" content="Manuel"> <!-- This man is awesome-->
+	
+	<link rel="icon" type="image/png" href="img/nav-logo.png" /> <!-- This one is for the icon on your browser's tab-->
+	
+	<title>PortFolio de Manuel</title> <!-- title is for the name in your browser's tab-->
+	<meta name="description" content="Actuellement freelance en tant qu'intégrateur : je crée des sites web en HTML, CSS, JQuery. J'ai 3 ans d'expérience profesionnelles.">
+	<meta name="keywords" content="PortFolio, Manuel, HTML, CSS, JQuery, développeur web, intégrateur, SQL, PHP, Photoshop, Japan, France"> <!-- meta keywords is useless isn't it ? Who knows ? Maybe one day...-->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Used for responsive -->
+	
+</head>
+	
+<!-- 
+                    _____ ______   ________  ________   ___  ___  _______   ___               ________  ________  ________  _________  ________ ________  ___       ___  ________                        
+                   |\   _ \  _   \|\   __  \|\   ___  \|\  \|\  \|\  ___ \ |\  \             |\   __  \|\   __  \|\   __  \|\___   ___\\  _____\\   __  \|\  \     |\  \|\   __  \                       
+ ____________      \ \  \\\__\ \  \ \  \|\  \ \  \\ \  \ \  \\\  \ \   __/|\ \  \            \ \  \|\  \ \  \|\  \ \  \|\  \|___ \  \_\ \  \__/\ \  \|\  \ \  \    \ \  \ \  \|\  \        ____________  
+|\____________\     \ \  \\|__| \  \ \   __  \ \  \\ \  \ \  \\\  \ \  \_|/_\ \  \            \ \   ____\ \  \\\  \ \   _  _\   \ \  \ \ \   __\\ \  \\\  \ \  \    \ \  \ \  \\\  \      |\____________\
+\|____________|      \ \  \    \ \  \ \  \ \  \ \  \\ \  \ \  \\\  \ \  \_|\ \ \  \____        \ \  \___|\ \  \\\  \ \  \\  \|   \ \  \ \ \  \_| \ \  \\\  \ \  \____\ \  \ \  \\\  \     \|____________|
+                      \ \__\    \ \__\ \__\ \__\ \__\\ \__\ \_______\ \_______\ \_______\       \ \__\    \ \_______\ \__\\ _\    \ \__\ \ \__\   \ \_______\ \_______\ \__\ \_______\                   
+                       \|__|     \|__|\|__|\|__|\|__| \|__|\|_______|\|_______|\|_______|        \|__|     \|_______|\|__|\|__|    \|__|  \|__|    \|_______|\|_______|\|__|\|_______|                                   
+-->
+	
+<body>
+	
+	<header>
+		
+		<svg id="progresscontainer"> <!-- Used to see the progression of where you still have to see of the portfolio-->
+			<line class="progressbar" x1="0" x2="100%" y1="0" y2="0"></line>
+		</svg>
+		
+		<nav>
+			
+			<input type="checkbox" id="hamburger-click" name="hamburger-click"> <!-- Used to be able to use click for CSS-->
+			<input type="checkbox" id="languages-click" name="languages-click">
+			<label id="hamburger-label" for ="hamburger-click">
+				<span id="hamburger" class="picto icon-menu"></span>
+				<span id="cross" class="picto icon-cross"></span>
+			</label>
+			<div id="container-mobile-logo">
+				<a id="logo-mobile" class="discreet-link" href="#top"><img alt="Logo du PortFolio" src="img/nav-logo.png"/> </a>
+			</div>
+			<a id="logo-desktop" class="discreet-link" href="#top">PortFolio de Manuel</a>
+			<ul id="main-menu"> 
+				<li> <a class="discreet-link" href="#about" >Introduction</a>
+					<svg>
+						<line class="right-mobile" x1="0" x2="100%" y1="0" y2="0"></line>
+					</svg>
+				</li>
+				<li> <a class="discreet-link" href="#works" >Travaux</a>
+					<svg>
+						<line class="right-mobile" x1="0" x2="100%" y1="0" y2="0"></line>
+					</svg>
+				</li>
+				<li> <a class="discreet-link" href="#skills">Compétances</a>					
+					<svg>
+						<line class="right-mobile" x1="0" x2="100%" y1="0" y2="0"></line>
+					</svg>
+				</li>
+				<li> <a class="discreet-link" href="#hobbies">Loisirs</a>					
+					<svg>
+						<line class="right-mobile" x1="0" x2="100%" y1="0" y2="0"></line>
+					</svg>
+				</li>
+				<li> <a class="discreet-link" href="#contact">Contact</a>					
+					<svg>
+						<line class="right-mobile" x1="0" x2="100%" y1="0" y2="0"></line>
+					</svg>
+				</li>
+				<ul id="dropdown-top">
+					<label for="languages-click">
+						<span class="discreet-link">Langues</span>
+					</label>
+					<div class="dropdown-menu">
+						<ul>
+							<li><a class="discreet-link" href="index.html">English</a></li>
+							<li><a class="discreet-link" href="index-jp.html">日本語</a></li>
+						</ul>
+					</div>
+				</ul>
+				<label id="circle-up-mobile-container" for="hamburger-click">
+					<span id="close-menu" class="picto icon-circle-up"></span>
+				</label>
+			</ul> 
+			<svg id="bottomnav">
+				<line class="right" x1="0" x2="100%" y1="0" y2="0"></line>
+			</svg>
+			
+		</nav>
+		
+	</header>
+	
+	<main>
+		
+		<div class="noscript">	<!-- noscript tag has div to be able to style it-->
+			<noscript>Activez Javascript ou désactivez votre bloqueur de scripts pour voir tout le contenu du portfolio pour profiter de la meilleure expérience du monde ! Ne vous inquiétez pas : pas de pubs ici.</noscript>
+		</div>
+		
+		<section id="top">
+			
+			<div id="top-creator">
+				
+				<div id="presentation">
+					<h1>Intégrateur Web</h1>
+				</div>
+				
+				<p>"J'ai pensé qu'en ajoutant une citation ici, je passerais pour une personne importante"</p>
+				
+				<p id="scroll-down">Faites défiler <span class="icon-arrow-down2"></span></p>
+				
+			</div>
+				
+		</section>
+		
+		<section id="about">
+			
+			<h2>A propos de moi</h2>
+			
+			<div id="about-describe">
+				
+				<p>Ce portfolio va vous informer sur ce à quoi ressemblent mes travaux passés, mes compétences et mes passe-temps.</p>
+				<p>Le but de mon portfolio est d'expliquer de la manière la plus concise possible, qui je suis, ce que j'aime et ce que je fais.</p>
+				<p>Je m'appelle Manuel, je viens de France et je possède une Licence Profesionnelle dans le développement web ainsi que 3 ans d'expériences professionnelles dans la création de sites web : 1 année en tant que développeur web et 2 en tant qu'intégrateur web.</p>
+				<p>N'hésitez pas à consulter le code source de ce portfolio (surtout dans les fichiers CSS et JS) : j'ai essayé plusieurs choses différentes pour varier le code.</p>
+			
+			</div>
+				
+		</section>
+		
+		<section id="works">
+			
+			<h2>Mes travaux</h2>
+			
+			<div id="works-container">
+			
+				<div id="works-introduction">
+				
+					<p>Cette partie est consacrée à mes précédents travaux. Vous verrez ce que j'ai réalisé entierement par moi-meme. N'hésitez pas à jeter un coup d'oeil. </p>	
+					<p>Si vous avez des questions consernant l'un de mes travaux, n'hésitez pas à me contacter. </p>					
+				
+				</div>
+				
+				<div id="all-works-container">
+				
+					<div class="work-container"> 
+						
+						<div class="work-title"> 
+							<h3>Votre Site</h3>
+						</div>
+						
+						<div class="work-img"> 
+							<img src="img/works/Votre_Site.png" alt="Votre Site image de preview" />
+						</div>
+						
+						<div class="work-buttons"> 
+							
+							<div class="button-mobile">
+								<a href="img/works/Votre_Site_s20_ultra.jpg" target="_blank">Mobile</a>
+							</div>
+							
+							<div class="button-tablet">
+								<a href="img/works/Votre_Site_ipad.jpg" target="_blank">Tablette</a>
+							</div>
+							
+							<div class="button-4k">
+								<a href="img/works/Votre_Site_4k.jpg" target="_blank">Desktop 4K</a>
+							</div>
+							
+						</div>
+						
+					</div>
+				
+					<div class="work-container"> 
+						
+						<div class="work-title"> 
+							<h3>JA Assure</h3>
+						</div>
+						
+						<div class="work-img"> 
+							<img src="img/works/JA_Assure.png" alt="JA Assure image de preview" />
+						</div>
+						
+						<div class="work-buttons"> 
+							
+							<div class="button-mobile">
+								<a href="img/works/JA_Assure_s20_ultra.jpg" target="_blank">Mobile</a>
+							</div>
+							
+							<div class="button-tablet">
+								<a href="img/works/JA_Assure_IpadMini.jpg" target="_blank">Tablette</a>
+							</div>
+							
+							<div class="button-4k">
+								<a href="img/works/JA_Assure_4k.jpg" target="_blank">Desktop 4K</a>
+							</div>
+							
+						</div>
+						
+					</div>
+					
+					<div class="work-container"> 
+						
+						<div class="work-title"> 
+							<h3>Liber</h3>
+						</div>
+						
+						<div class="work-img"> 
+							<img src="img/works/Liber.png" alt="Liber image de preview" />
+						</div>
+						
+						<div class="work-buttons"> 
+							
+							<div class="button-mobile">
+								<a href="img/works/Liber_s20_ultra.jpg" target="_blank">Mobile</a>
+							</div>
+							
+							<div class="button-4k">
+								<a href="img/works/Liber_4k.jpg" target="_blank">Desktop 4K</a>
+							</div>
+							
+						</div>
+						
+					</div>
+				
+				</div>
+			</div>
+				
+		</section>
+		
+		<section id="skills">
+			
+			<h2>Mes compétances</h2>
+			
+			<div class="skills-container">
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/HTML5.png" alt="HTML5 logo" />
+						<span class="skills-how">Passez votre souris par-dessus pour en voir son contenu</span>
+					</div>
+					<h3>HTML</h3>
+					<p><span class="skills-title">Introduction :</span> Le squelette des pages web : c'est ce qu'est HTML.</p> 
+					<p><span class="skills-title">Mon expérience :</span> Utilisation de ses sémantiques, de ces balises... et toutes les dernières fonctionnalités d' HTML (HTML5) pour construire une page web, ou une application. J'ai également créé des templates Emailing GMail, Outlook... </p>
+					<p><span class="skills-title">Ce que j'aime :</span> le début et la première chose quand on crée une page web pour faire d'un projet une réalité. C'est ce que j'apprécie le plus à propos d'HTML.</p>
+				</div>
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/css.png" alt="CSS3 logo" />
+						<span class="skills-how">Passez votre souris par-dessus pour en voir son contenu</span>
+					</div>
+					<h3>CSS</h3>
+					<p><span class="skills-title">Introduction :</span> CSS est utilisé pour styler, customiser, moderniser et créer des pages web responsives. </p> 
+					<p><span class="skills-title">Mon expérience :</span> J'utilise sa dernière version (CSS3) comme ses @Media Queries pour créer du contenu spécifique basé sur la taille de l'écran de l'appareil. J'utilise également Flex ou ses équivalents CSS pour afficher du contenu complexe tout en restant responsive ou Grid pour afficher un tableau sans style particulier... Je connais tous les principaux contenus CSS. J'ai également utilisé le framework Bootstrap en entreprise.</p>
+					<p><span class="skills-title">Ce que j'aime :</span> styler un site web et essayer de le designer davantage et être content du résultat final.</p>
+				</div>
+				
+			</div>
+			
+			<div class="skills-container">
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/Jquery.png" alt="Jquery logo" />
+						<span class="skills-how">Passez votre souris par-dessus pour en voir son contenu</span>
+					</div>
+					<h3>JQuery</h3>
+					<p><span class="skills-title">Introduction :</span> Utilisé pour créer des pages dynamiques.</p>
+					<p><span class="skills-title">Mon expérience :</span> Via beaucoup de projets web ou d'expériences que j'ai eues, j'ai utilisé ses fonctions pour automatiquement créer ou éditer des cookies web. Créer des scripts ajoutant automatiquement du contenu HTML ou CSS. Ses fonctions d'animations... principalement dans des applications web en entreprises (mais également sur des pages web normales).</p>
+					<p><span class="skills-title">Ce que j'aime :</span> faire, par exemple un formulaire automatique d'une application web pour le rendre plus dynamique. C'est ce que j'apprécie le plus.</p>
+				</div>
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/php.png" alt="PHP logo" />
+						<span class="skills-how">Passez votre souris par-dessus pour en voir son contenu</span>
+					</div>
+					<h3>PHP</h3>
+					<p><span class="skills-title">Introduction :</span> Utilisé pour créer des applications web sur des serveurs web.</p> 
+					<p><span class="skills-title">Mon expérience :</span> Je l'ai utilisé énormément quand j'étais Programmeur Web en entreprise. Au début j'utilisais le PHP procédural. Finalement j'utilisais le PHP Orientés Objets en MVC. N'hésitez pas à voir mon contenu public sur ce sujet sur mon compte GitLab. J'ai également utilisé le framework Smarty. J'ai également travaillé sur le CMS Prestashop et surchargé ses classes (en créant des add-ons), pour ajouter des menus en BackOffice du CMS et ainsi interagir avec de nouvelles données de la base de données.</p>
+					<p><span class="skills-title">Ce que j'aime :</span> Le fait de créer des programmes sans avoir besoin d'utiliser des langages logiciels. Manipuler des données d'une application web que j'ai créé avec une base de données en SQL via des fonctions PHP.</p>
+				</div>
+				
+			</div>
+			
+			<div class="skills-container">
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/sql.png" alt="SQL logo" />
+						<span class="skills-how">Passez votre souris par-dessus pour en voir son contenu</span>
+					</div>
+					<h3>SQL</h3>
+					<p><span class="skills-title">Introduction :</span> Utilisé pour faire des requêtes de données sur des serveurs web pour les applications.</p> 
+					<p><span class="skills-title">Mon expérience :</span> J'ai créé des requêtes qui ajoutes, modifies, supprimes... des données ou d'autres requêtes (imbriqués) en entreprise. J'ai principalement utilisé MySQL mais également PostgreSQL et MS-SQL.</p>
+					<p><span class="skills-title">Ce que j'aime :</span> Manipuler des données pour les liés vers un programme web et interagir avec...</p>
+				</div>
+				
+				<div class="skills-child montage">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/photoshop.png" alt="Photoshop logo" />
+						<span class="skills-how">Passez votre souris par-dessus pour en voir son contenu</span>
+					</div>
+					<img id="montage" alt="Friend of mine's montage of me" src="img/film.jpg" />
+					<h3>Adobe Photoshop - Photofiltre</h3>
+					<p><span class="skills-title">Introduction :</span> Utilisés pour créer ou éditer des photos.</p> 
+					<p><span class="skills-title">Mon expérience :</span> Je l'ai utilisé pour extraire des portions d'éléments sur des fichiers PSD des designers pour les utiliser lors de la création de pages web en entreprise. Créer des Wireframes. Et également créer des montages de personnes que je connais pour plaisanter : utilisation d'outils comme la gomme, la création de plusieurs calques...</p>
+					<p><span class="skills-title">Ce que j'aime :</span> rien de spécial, mais c'est toujours fun d'être (ou voir des amis) sur une affiche de film.</p>
+				</div>
+				
+			</div>
+			
+			<div class="skills-container">
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/powershell-logo.png" alt="Powershell logo" />
+						<span class="skills-how">Passez votre souris par-dessus pour en voir son contenu</span>
+					</div>
+					<h3>Microsoft Powershell - MS-DOS</h3>
+					<p><span class="skills-title">Introduction :</span> Utilisés pour faire des scripts pour Microsoft Windows.</p> 
+					<p><span class="skills-title">Mon expérience :</span> J'ai utilisé ses fonctions. J'ai créé quelques scripts pour des jeux qui sont uniquement prévus pour les claviers QWERTY vers AZERTY. Changer les valeurs du registre pour modifier les valeurs des options des jeux...</p>
+					<p><span class="skills-title">Ce que j'aime :</span> Créer des scripts qui sont faciles d'utilisations sans avoir à utiliser des logiciels à télécharger. Et comprendre comment les valeurs Windows sont utilisées.</p>
+				</div>
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/microsoft-office.png" alt="Microsoft Office logo" />
+						<span class="skills-how">Passez votre souris par-dessus pour en voir son contenu</span>
+					</div>
+					<h3>Microsoft Word - Microsoft Excel - Microsoft Powerpoint</h3>
+					<p><span class="skills-title">Introduction :</span> utilisé pour créer des documents bureautiques.</p> 
+					<p><span class="skills-title">Mon expérience :</span> à la maison, à l'école, au travail... Je les ai utilisés partout pour beaucoup de projets.</p>
+					<p><span class="skills-title">Ce que j'aime :</span> rien de spécial, mais très utiles.</p>
+				</div>
+				
+			</div>
+				
+		</section>
+		
+		<section id="hobbies">
+			
+			<h2>Mes loisirs</h2>
+			
+			<div id="hobbies-background">
+			
+				<div id="hobbies-container">
+
+					<div class="hobbies-fullsized">
+						
+						<div class="hobbies hobbies-left">
+							<div class="hobbies-picto-container">
+								<span id="videogames" class="picto icon-pacman"></span>
+							</div>
+							<div class="hobbies-description-container">
+								<h3>Jouer aux Jeux-Video</h3>
+								<p class="hobbies-description">Je joue aux jeux-vidéo depuis l'âge de 5 ans. J'ai toujours été intéressé à l'idée de découvrir de nouveaux jeux. J'ai joué à peu près aux alentours de 3000 jeux répartis approximativement par 30 différentes machines. </p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-right">
+							<div class="hobbies-description-container">
+								<h3>Regarder des films / Séries / Vidéos sur internet</h3>
+								<p class="hobbies-description">J'ai vu presque les plus grands classiques du cinéma. Quelques series les plus connues. Beaucoup de vidéos Youtube sur les domaines de : la santé, les sciences, l'espace, l'histoire, les jeux vidéo, les voyages et les différences culturelles mondiales.</p>
+							</div>
+							<div class="hobbies-picto-container">
+								<span id="video" class="picto icon-film"></span>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-left">
+							<div class="hobbies-picto-container">
+								<span id="writing" class="picto icon-pencil"></span>
+							</div>
+							<div class="hobbies-description-container">
+								<h3>Écrire</h3>
+								<p class="hobbies-description">J'ai écrit et j'écris encore des idées et des histoires quand l'inspiration me vient.</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-right">
+							<div class="hobbies-description-container">
+								<h3>Coder</h3>
+								<p class="hobbies-description">Ma spécialité et mon domaine d'activité quand j'étais étudiant et aujourd'hui au travail. Tout a commencé lorsque ma curiosité s'est demandée comment fonctionne concrètement un ordinateur. Ce passe-temps révolutionnaire qui a permis de rendre tout ce qu'est virtuel possible.</p>
+							</div>
+							<div class="hobbies-picto-container">
+								<span id="coding" class="picto icon-html-five"></span>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-left">
+							<div class="hobbies-picto-container">
+								<span id="english" class="picto icon-coin-dollar"></span>
+							</div>
+							<div class="hobbies-description-container">
+								<h3>Apprendre l'anglais</h3>
+								<p class="hobbies-description">Très utile pour beaucoup de choses que j'aime. J'ai un niveau conversationnel/professionnel. La plupart de mon niveau vient de mes passe-temps.</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-right">
+							<div class="hobbies-description-container">
+								<h3>Apprendre le japonais</h3>
+								<p class="hobbies-description"><!--J'ai envie d'y travailler, envie d'y communiquer.--> J'ai un niveau basique : les Kana, quelques mots/Kanji, toutes les particules...</p>
+							</div>
+							<div class="hobbies-picto-container">
+								<span id="japanese" class="picto icon-coin-yen"></span>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-left">
+							<div class="hobbies-picto-container">
+								<span id="travel" class="picto icon-airplane"></span>
+							</div>
+							<div class="hobbies-description-container">
+								<h3>Voyager</h3>
+								<p class="hobbies-description">J'ai passé la plupart de mes voyages dans l'Europe de l'Ouest et le Japon. Et ce n'est pas terminé. <!--N'hésitez pas à voir mon nouveau profil Instagram.--></p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-right">
+							<div class="hobbies-description-container">
+								<h3>Prendre des photos</h3>
+								<p class="hobbies-description">Ce que je fais la plupart du temps quand j'ai voyagé. J'aime également utiliser Adobe Lightroom.</p>
+							</div>
+							<div class="hobbies-picto-container">
+								<span id="photos" class="picto icon-camera"></span>
+							</div>
+						</div>
+
+					</div>
+
+				</div>	
+				
+			</div>
+			
+		</section>
+		
+		<section id="contact">
+			
+			<h2>Contactez-moi</h2>
+			
+			<div class="contact-introduction">
+				
+				<p>Vous voulez me contacter ? Vous avez une question ? Vous avez une proposition profesionnelle à me faire parvenir ? Vous n'aimez pas ma manière de coder ? Vous pensez que mon portfolio est trop génial mais vous n'arrivez pas à m'exprimer votre émotion ? Vous n'aimez pas mon humour ? Vous pensez que mon site est trop sombre ? Ma photo en haut de ce portfolio vous fait peur ?</p>  
+				<p>Maintenant vous pouvez me le dire en choisissant l'un des moyens de communication ci-dessous :</p> 
+				
+			</div>
+			
+			<div class="contact-socials">
+				
+				<a href="mailto:%6D%61%6E%75%65%6C%69%6E%74%68%65%77%65%62%40%67%6D%61%69%6C%2E%63%6F%6D" class="ico-social icon-mail4"></a> <!-- encrypted mail -->
+				<!--<a href="https://www.instagram.com/" target="_blank" class="ico-social icon-instagram"></a>-->
+				<a href="https://gitlab.com/M.A" target="_blank" class="ico-social icon-gitlab"></a>
+				 
+			</div>
+			
+		</section>
+		
+	</main>
+	
+<footer>
+	
+	<div id="footer-content"><span id="date"></span> - Tout Droits Réservés</div>
+
+</footer>
+
+</body>
+
+</html>

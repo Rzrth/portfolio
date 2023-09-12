@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+
+<!-- Oh ! I see that you are interested about the source code hmm ? Enjoy then !
+-->
+
+<html lang="ja">
+
+<head>
+	
+	<meta charset="UTF-8">
+	
+	<link type="text/css" href="css/style.css" rel="stylesheet"> <!-- Used to import CSS in the HTML page-->
+	<link type="text/css" href="css/icomoon.css" rel="stylesheet">
+	
+	<script src="js/jquery.min.js"></script> <!-- Used to import JS scripts in the HTML page-->
+	<script src="js/scripts.js"></script>
+	
+	<link rel="alternate" hreflang="en" href="https://manuintheweb.pagesperso-orange.fr/index.html" /> <!-- Used for multilanguages sites-->
+	<link rel="alternate" hreflang="fr" href="https://manuintheweb.pagesperso-orange.fr/index-fr.html" />
+	<link rel="alternate" hreflang="ja" href="https://manuintheweb.pagesperso-orange.fr/index-jp.html" />
+	
+	<meta name="author" content="Manuel">
+	
+	<link rel="icon" type="image/png" href="img/nav-logo.png" /> <!-- This one is for the icon on your browser's tab-->
+	
+	<title>マヌエルのポートフォリオのポートフォリオサイトです。</title> <!-- title is for the name in your browser's tab-->
+	<meta name="description" content="Currently a Web Developer freelancer : I'm making websites in HTML, CSS, JQuery and have 3 years of professional experience.">
+	<meta name="keywords" content="PortFolio, Manuel, HTML, CSS, JQuery, web developper, SQL, PHP, Photoshop, Japan, France"> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Used for responsive -->
+	
+</head>
+	
+<!-- 
+                    _____ ______   ________  ________   ___  ___  _______   ___               ________  ________  ________  _________  ________ ________  ___       ___  ________                        
+                   |\   _ \  _   \|\   __  \|\   ___  \|\  \|\  \|\  ___ \ |\  \             |\   __  \|\   __  \|\   __  \|\___   ___\\  _____\\   __  \|\  \     |\  \|\   __  \                       
+ ____________      \ \  \\\__\ \  \ \  \|\  \ \  \\ \  \ \  \\\  \ \   __/|\ \  \            \ \  \|\  \ \  \|\  \ \  \|\  \|___ \  \_\ \  \__/\ \  \|\  \ \  \    \ \  \ \  \|\  \        ____________  
+|\____________\     \ \  \\|__| \  \ \   __  \ \  \\ \  \ \  \\\  \ \  \_|/_\ \  \            \ \   ____\ \  \\\  \ \   _  _\   \ \  \ \ \   __\\ \  \\\  \ \  \    \ \  \ \  \\\  \      |\____________\
+\|____________|      \ \  \    \ \  \ \  \ \  \ \  \\ \  \ \  \\\  \ \  \_|\ \ \  \____        \ \  \___|\ \  \\\  \ \  \\  \|   \ \  \ \ \  \_| \ \  \\\  \ \  \____\ \  \ \  \\\  \     \|____________|
+                      \ \__\    \ \__\ \__\ \__\ \__\\ \__\ \_______\ \_______\ \_______\       \ \__\    \ \_______\ \__\\ _\    \ \__\ \ \__\   \ \_______\ \_______\ \__\ \_______\                   
+                       \|__|     \|__|\|__|\|__|\|__| \|__|\|_______|\|_______|\|_______|        \|__|     \|_______|\|__|\|__|    \|__|  \|__|    \|_______|\|_______|\|__|\|_______|                                   
+-->
+	
+<body>
+	
+	<header>
+		
+		<svg id="progresscontainer"> <!-- Used to see the progression of where you still have to see of the portfolio-->
+			<line class="progressbar" x1="0" x2="100%" y1="0" y2="0"></line>
+		</svg>
+		
+		<nav>
+			
+			<input type="checkbox" id="hamburger-click" name="hamburger-click"> <!-- Used to be able to use click for CSS-->
+			<input type="checkbox" id="languages-click" name="languages-click">
+			<label id="hamburger-label" for ="hamburger-click">
+				<span id="hamburger" class="picto icon-menu"></span>
+				<span id="cross" class="picto icon-cross"></span>
+			</label>
+			<div id="container-mobile-logo">
+				<a id="logo-mobile" class="discreet-link" href="#top"><img alt="Logo of PortFolio" src="img/nav-logo.png"/> </a>
+			</div>
+			<a id="logo-desktop" class="discreet-link" href="#top">マヌエルのポートフォリオ</a>
+			<ul id="main-menu"> 
+				<li> <a class="discreet-link" href="#about" >自己紹介</a>
+					<svg>
+						<line class="right-mobile" x1="0" x2="100%" y1="0" y2="0"></line>
+					</svg>
+				</li>
+				<li> <a class="discreet-link" href="#works">制作実例</a>					
+					<svg>
+						<line class="right-mobile" x1="0" x2="100%" y1="0" y2="0"></line>
+					</svg>
+				</li>
+				<li> <a class="discreet-link" href="#skills">スキル</a>					
+					<svg>
+						<line class="right-mobile" x1="0" x2="100%" y1="0" y2="0"></line>
+					</svg>
+				</li>
+				<li> <a class="discreet-link" href="#hobbies">趣味</a>					
+					<svg>
+						<line class="right-mobile" x1="0" x2="100%" y1="0" y2="0"></line>
+					</svg>
+				</li>
+				<li> <a class="discreet-link" href="#contact">お問い合わせ</a>					
+					<svg>
+						<line class="right-mobile" x1="0" x2="100%" y1="0" y2="0"></line>
+					</svg>
+				</li>
+				<ul id="dropdown-top">
+					<label for="languages-click">
+						<span class="discreet-link">言語</span>
+					</label>
+					<div class="dropdown-menu">
+						<ul>
+							<li><a class="discreet-link" href="index.html">English</a></li>
+							<li><a class="discreet-link" href="index-fr.html">Français</a></li>
+						</ul>
+					</div>
+				</ul>
+				<label id="circle-up-mobile-container" for="hamburger-click">
+					<span id="close-menu" class="picto icon-circle-up"></span>
+				</label>
+			</ul> 
+			<svg id="bottomnav">
+				<line class="right" x1="0" x2="100%" y1="0" y2="0"></line>
+			</svg>
+			
+		</nav>
+		
+	</header>
+	
+	<main>
+		
+		<div class="noscript">	<!-- noscript tag has div to be able to style it-->
+			<noscript>Activate Javascript or disable script blocker to see all the content of the portfolio which is the best experience in the world ! Don't worry, no ads here</noscript>
+		</div>
+		
+		<section id="top">
+			
+			<div id="top-creator">
+				
+				<div id="presentation">
+					<h1>WEBエンジニア</h1>
+				</div>
+				
+				<p id="scroll-down">スクロール <span class="icon-arrow-down2"></span></p>
+				
+			</div>
+				
+		</section>
+		
+		<section id="about">
+			
+			<h2>自己紹介</h2>
+			
+			<div id="about-describe">
+				
+				<p>このポートフォリオでは、私の制作実例と趣味とスキルがどのようなものかをお伝えします。</p>
+				<p>That's my portfolio's goal : to explain as close as possible in short words, what I am, what I do and what I like.</p>
+				<p>私の名前はマニュエル、フランス人です。私は情報工学系を持っており、Webプログラマーとして1年、フロントエンドとして2年の経験があります。 </p>
+				<p>このポートフォリオのソースコードを見るのをためらわないでください 「主に CSS ファイルと JS ファイル」。I tried to do many different things on it to vary the code.</p>
+			
+			</div>
+				
+		</section>
+		
+		<section id="works">
+			
+			<h2>制作実例</h2>
+			
+			<div id="works-container">
+			
+				<div id="works-introduction">
+				
+					<p>This part is about my previous works. You will see what I've done entirely by myself. So please, just take a look. </p>	
+					<p>If you have any question regarding to one of my work, feel free to contact me. </p>					
+				
+				</div>
+				
+				<div id="all-works-container">
+				
+					<div class="work-container"> 
+						
+						<div class="work-title"> 
+							<h3>Your Site</h3>
+						</div>
+						
+						<div class="work-img"> 
+							<img src="img/works/Your_Site.png" alt="Your Site preview page image" />
+						</div>
+						
+						<div class="work-buttons"> 
+							
+							<div class="button-mobile">
+								<a href="img/works/Your_Site_s20_ultra.jpg" target="_blank">モバイル</a>
+							</div>
+							
+							<div class="button-tablet">
+								<a href="img/works/Your_Site_ipad.jpg" target="_blank">タブレット</a>
+							</div>
+							
+							<div class="button-4k">
+								<a href="img/works/Your_Site_4k.jpg" target="_blank">4k デスクトップ</a>
+							</div>
+							
+						</div>
+						
+					</div>
+				
+					<div class="work-container"> 
+						
+						<div class="work-title"> 
+							<h3>JA Assure</h3>
+						</div>
+						
+						<div class="work-img"> 
+							<img src="img/works/JA_Assure.png" alt="JA Assure preview page image" />
+						</div>
+						
+						<div class="work-buttons"> 
+							
+							<div class="button-mobile">
+								<a href="img/works/JA_Assure_s20_ultra.jpg" target="_blank">モバイル</a>
+							</div>
+							
+							<div class="button-tablet">
+								<a href="img/works/JA_Assure_IpadMini.jpg" target="_blank">タブレット</a>
+							</div>
+							
+							<div class="button-4k">
+								<a href="img/works/JA_Assure_4k.jpg" target="_blank">4k デスクトップ</a>
+							</div>
+							
+						</div>
+						
+					</div>
+					
+					<div class="work-container"> 
+						
+						<div class="work-title"> 
+							<h3>Liber</h3>
+						</div>
+						
+						<div class="work-img"> 
+							<img src="img/works/Liber.png" alt="Liber preview page image" />
+						</div>
+						
+						<div class="work-buttons"> 
+							
+							<div class="button-mobile">
+								<a href="img/works/Liber_s20_ultra.jpg" target="_blank">モバイル</a>
+							</div>
+							
+							<div class="button-4k">
+								<a href="img/works/Liber_4k.jpg" target="_blank">4k デスクトップ</a>
+							</div>
+							
+						</div>
+						
+					</div>
+				
+				</div>
+			</div>
+				
+		</section>
+		
+		<section id="skills">
+			
+			<h2>スキル</h2>
+			
+			<div class="skills-container">
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/HTML5.png" alt="HTML5 logo" />
+						<span class="skills-how">Put your mouse hover it to see the content</span>
+					</div>
+					<h3>HTML</h3>
+					<p><span class="skills-title">「はじめに」</span>Skeleton of web pages : this is what HTML is.</p> 
+					<p><span class="skills-title">「私の体験談」</span>I use it's semantics, tags... and all the latest contents of HTML (HTML5) to build a webpage, or applications. I also made Emailing templates for GMail, Outlook... </p>
+					<p><span class="skills-title">「気に入っている点」</span>the begining and the first thing you use on a brand new webpage to make your web project alive. All of that is what I appreciate the most about HTML.</p>
+				</div>
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/css.png" alt="CSS3 logo" />
+						<span class="skills-how">Put your mouse hover it to see the content</span>
+					</div>
+					<h3>CSS</h3>
+					<p><span class="skills-title">「はじめに」</span>CSS is Used to stylish, customize, modernize, and make a responsive web pages. </p> 
+					<p><span class="skills-title">「私の体験談」</span>I use its latest version (CSS3) just like his @Media Queries to set specific CSS content based to width of the device. I also use Flex or CSS similar to adjust responsive complex contents or Grid to display table without specific style... I know all mainly CSS contents. I also used Bootstrap framework at work.</p>
+					<p><span class="skills-title">「気に入っている点」</span>make a styled website and try to design it more and be happy about the final result.</p>
+				</div>
+				
+			</div>
+			
+			<div class="skills-container">
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/Jquery.png" alt="Jquery logo" />
+						<span class="skills-how">Put your mouse hover it to see the content</span>
+					</div>
+					<h3>JQuery</h3>
+					<p><span class="skills-title">「はじめに」</span>Used to make web pages dynamic.</p>
+					<p><span class="skills-title">「私の体験談」</span>Via many web projects or experiences that I had, I used it's functions to automaticly create or edit web pages Cookies. Automatically create scripts that add HTML or CSS contents. His animations functions... mainly in web applications at work (but also on normal web pages).</p>
+					<p><span class="skills-title">「気に入っている点」</span>make, for example an automatic form on a web application to make it more dynamic. That's the thing I appreciate the most.</p>
+				</div>
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/php.png" alt="PHP logo" />
+						<span class="skills-how">Put your mouse hover it to see the content</span>
+					</div>
+					<h3>PHP</h3>
+					<p><span class="skills-title">「はじめに」</span>Used to create web applications on web servers.</p> 
+					<p><span class="skills-title">「私の体験談」</span>I used a lot when I was Web Programmers at work. At the beginning I used PHP without Object-Oriented. Finally I used OOP with MVC design pattern in the end. Do not hesitate to watch my Gitlab public MVC  & OOP little contents. I also used Smarty framework. And also worked on Prestashop CMS and overloaded its classes (by creating some add-ons), to add another back-office menu on the CMS and so interact with new data from the database.</p>
+					<p><span class="skills-title">「気に入っている点」</span>The fact that to create programs without needing to use software languages. Manipulate data from web application I created with a SQL database via PHP functions.</p>
+				</div>
+				
+			</div>
+			
+			<div class="skills-container">
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/sql.png" alt="SQL logo" />
+						<span class="skills-how">Put your mouse hover it to see the content</span>
+					</div>
+					<h3>SQL</h3>
+					<p><span class="skills-title">「はじめに」</span>Used to make data requests on web servers for applications.</p> 
+					<p><span class="skills-title">「私の体験談」</span>I created requests that adds new/edit/delete... datas/another requests (imbricated ones) at work. I used mainly MySQL but also PostgreSQL and MS-SQL.</p>
+					<p><span class="skills-title">「気に入っている点」</span>Manipulate data to link it to web program and interact with...</p>
+				</div>
+				
+				<div class="skills-child montage">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/photoshop.png" alt="Photoshop logo" />
+						<span class="skills-how">Put your mouse hover it to see the content</span>
+					</div>
+					<img id="montage" alt="Friend of mine's montage of me" src="img/film.jpg" />
+					<h3>アドビ フォトショップ - Photofiltre</h3>
+					<p><span class="skills-title">「はじめに」</span>Used to create / edit pictures.</p> 
+					<p><span class="skills-title">「私の体験談」</span>I used it to extract portion of the elements of PSD files from designers to use them for making a webpage at work. Create Wireframes. And also for making a montage of people that I know for fun : using tools like eraser, creation of multiple layers...</p>
+					<p><span class="skills-title">「気に入っている点」</span>nothing special, but it's always fun to be on the film's poster or friends on it.</p>
+				</div>
+				
+			</div>
+			
+			<div class="skills-container">
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/powershell-logo.png" alt="Powershell logo" />
+						<span class="skills-how">Put your mouse hover it to see the content</span>
+					</div>
+					<h3>Microsoft Powershell - MS-DOS</h3>
+					<p><span class="skills-title">「はじめに」</span>Used to make scripts for Microsoft Windows.</p> 
+					<p><span class="skills-title">「私の体験談」</span>Used it's functions. I created some scripts for games that they only planned for QWERTY keyboards to AZERTY ones. Changing regedit's values to change game option values...</p>
+					<p><span class="skills-title">「気に入っている点」</span>making scripts that are easy to use without using softwares to download. And understanding how Windows values are set.</p>
+				</div>
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/microsoft-office.png" alt="Microsoft Office logo" />
+						<span class="skills-how">Put your mouse hover it to see the content</span>
+					</div>
+					<h3>Microsoft Word - Microsoft Excel - Microsoft Powerpoint</h3>
+					<p><span class="skills-title">「はじめに」</span>used to create office documents.</p> 
+					<p><span class="skills-title">「私の体験談」</span>at home, at school, at work... I used them everywhere for many projects.</p>
+					<p><span class="skills-title">「気に入っている点」</span>nothing special, but very useful.</p>
+				</div>
+				
+			</div>
+				
+		</section>
+		
+		<section id="hobbies">
+			
+			<h2>趣味</h2>
+			
+			<div id="hobbies-background">
+			
+				<div id="hobbies-container">
+
+					<div class="hobbies-fullsized">
+						
+						<div class="hobbies hobbies-left">
+							<div class="hobbies-picto-container">
+								<span id="videogames" class="picto icon-pacman"></span>
+							</div>
+							<div class="hobbies-description-container">
+								<h3>ビデオゲームをする</h3>
+								<p class="hobbies-description">私は5歳の頃からビデオゲームをしていました。 Always interested about discovering new games. I played around 3000 games split through around 30 different systems. </p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-right">
+							<div class="hobbies-description-container">
+								<h3>Watching Movies / TV-Shows / Online Videos</h3>
+								<p class="hobbies-description">Saw almost all biggest classics movies. Some most famous TV-Shows. Many Youtube videos divided into health, sciences, space, history, videogames, travel and worldwide cultural differences.</p>
+							</div>
+							<div class="hobbies-picto-container">
+								<span id="video" class="picto icon-film"></span>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-left">
+							<div class="hobbies-picto-container">
+								<span id="writing" class="picto icon-pencil"></span>
+							</div>
+							<div class="hobbies-description-container">
+								<h3>筆記</h3>
+								<p class="hobbies-description">I wrote and still write some ideas and story when my inspiraction rise in my head.</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-right">
+							<div class="hobbies-description-container">
+								<h3>WEBコーディング</h3>
+								<p class="hobbies-description">私の学生時代の特技と仕事。All started because of my curiosity of "how computer's works". This revolutionary hobbie that makes every virtual thing possible.</p>
+							</div>
+							<div class="hobbies-picto-container">
+								<span id="coding" class="picto icon-html-five"></span>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-left">
+							<div class="hobbies-picto-container">
+								<span id="english" class="picto icon-coin-dollar"></span>
+							</div>
+							<div class="hobbies-description-container">
+								<h3>英語学習</h3>
+								<p class="hobbies-description">Very useful for many things that I like. I have a conversational/professional level. Must of my level now comes from all my hobbies.</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-right">
+							<div class="hobbies-description-container">
+								<h3>日本語学習</h3>
+								<p class="hobbies-description"><!--Want to work there, need to talk there.--> I have a basic level like : Kana, some words/Kanji, all particles...</p>
+							</div>
+							<div class="hobbies-picto-container">
+								<span id="japanese" class="picto icon-coin-yen"></span>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-left">
+							<div class="hobbies-picto-container">
+								<span id="travel" class="picto icon-airplane"></span>
+							</div>
+							<div class="hobbies-description-container">
+								<h3>旅行</h3>
+								<p class="hobbies-description">現在、西欧諸国と日本でほとんど過ごしています。そして、これは終わりではない。<!--私の新しいプロフィールのインスタグラムを見るのをためらわないでください。--></p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-right">
+							<div class="hobbies-description-container">
+								<h3>写真を撮る</h3>
+								<p class="hobbies-description">旅行に行ったときはほとんど。 また、アドビ ライトルームも好きで使っています。</p>
+							</div>
+							<div class="hobbies-picto-container">
+								<span id="photos" class="picto icon-camera"></span>
+							</div>
+						</div>
+
+					</div>
+
+				</div>	
+				
+			</div>
+			
+		</section>
+		
+		<section id="contact">
+			
+			<h2>お問い合わせ</h2>
+			
+			<div class="contact-introduction">
+				
+				<p>You want to contact me ? You have a question ? You have a professional proposal to me ? </p>  
+				<p>Now you can tell me by choosing one of the means of communication just below :</p> 
+				
+			</div>
+			
+			<div class="contact-socials">
+				
+				<a href="mailto:%6D%61%6E%75%65%6C%69%6E%74%68%65%77%65%62%40%67%6D%61%69%6C%2E%63%6F%6D" class="ico-social icon-mail4"></a> <!-- encrypted mail -->
+				<!--<a href="https://www.instagram.com/" target="_blank" class="ico-social icon-instagram"></a>-->
+				<a href="https://gitlab.com/M.A" target="_blank" class="ico-social icon-gitlab"></a>
+				 
+			</div>
+			
+		</section>
+		
+	</main>
+	
+<footer>
+	
+	<div id="footer-content"><span id="date"></span> - All Rights reserved</div>
+
+</footer>
+
+</body>
+
+</html>

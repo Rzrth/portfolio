@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<!-- Oh ! I see that you are interested about the source code hmm ? Enjoy then !
+-->
+
+<html lang="en">
+
+<head>
+	
+	<meta charset="UTF-8">
+	
+	<link type="text/css" href="css/style.css" rel="stylesheet"> <!-- Used to import CSS in the HTML page-->
+	<link type="text/css" href="css/icomoon.css" rel="stylesheet">
+	
+	<script src="js/jquery.min.js"></script> <!-- Used to import JS scripts in the HTML page-->
+	<script src="js/scripts.js"></script>
+	
+	<link rel="alternate" hreflang="en" href="https://manuintheweb.pagesperso-orange.fr/index.html" /> <!-- Used for multilanguages sites-->
+	<link rel="alternate" hreflang="fr" href="https://manuintheweb.pagesperso-orange.fr/index-fr.html" />
+	<link rel="alternate" hreflang="ja" href="https://manuintheweb.pagesperso-orange.fr/index-jp.html" />
+	
+	<meta name="author" content="Manuel"> <!-- This man is awesome-->
+	
+	<link rel="icon" type="image/png" href="img/nav-logo.png" /> <!-- This one is for the icon on your browser's tab-->
+	
+	<title>Manuel's Portfolio</title> <!-- title is for the name in your browser's tab-->
+	<meta name="description" content="Currently a Web Developer freelancer : I'm making websites in HTML, CSS, JQuery and have 3 years of professional experience.">
+	<meta name="keywords" content="Portfolio, Manuel, HTML, CSS, JQuery, web developper, SQL, PHP, Photoshop, Japan, France"> <!-- meta keywords is useless isn't it ? Who knows ? Maybe one day...-->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Used for responsive -->
+	
+	<meta name="google-site-verification" content="Zx2r_zHEjnP0mvPFm72MhRf2-ntJuWu_YcuplSZqYuA" />
+	
+</head>
+	
+<!-- 
+                    _____ ______   ________  ________   ___  ___  _______   ___               ________  ________  ________  _________  ________ ________  ___       ___  ________                        
+                   |\   _ \  _   \|\   __  \|\   ___  \|\  \|\  \|\  ___ \ |\  \             |\   __  \|\   __  \|\   __  \|\___   ___\\  _____\\   __  \|\  \     |\  \|\   __  \                       
+ ____________      \ \  \\\__\ \  \ \  \|\  \ \  \\ \  \ \  \\\  \ \   __/|\ \  \            \ \  \|\  \ \  \|\  \ \  \|\  \|___ \  \_\ \  \__/\ \  \|\  \ \  \    \ \  \ \  \|\  \        ____________  
+|\____________\     \ \  \\|__| \  \ \   __  \ \  \\ \  \ \  \\\  \ \  \_|/_\ \  \            \ \   ____\ \  \\\  \ \   _  _\   \ \  \ \ \   __\\ \  \\\  \ \  \    \ \  \ \  \\\  \      |\____________\
+\|____________|      \ \  \    \ \  \ \  \ \  \ \  \\ \  \ \  \\\  \ \  \_|\ \ \  \____        \ \  \___|\ \  \\\  \ \  \\  \|   \ \  \ \ \  \_| \ \  \\\  \ \  \____\ \  \ \  \\\  \     \|____________|
+                      \ \__\    \ \__\ \__\ \__\ \__\\ \__\ \_______\ \_______\ \_______\       \ \__\    \ \_______\ \__\\ _\    \ \__\ \ \__\   \ \_______\ \_______\ \__\ \_______\                   
+                       \|__|     \|__|\|__|\|__|\|__| \|__|\|_______|\|_______|\|_______|        \|__|     \|_______|\|__|\|__|    \|__|  \|__|    \|_______|\|_______|\|__|\|_______|                                        
+-->
+	
+<body>
+	
+	<header>
+		
+		<svg id="progresscontainer"> <!-- Used to see the progression of where you still have to see of the portfolio-->
+			<line class="progressbar" x1="0" x2="100%" y1="0" y2="0"></line>
+		</svg>
+		
+		<nav>
+			
+			<input type="checkbox" id="hamburger-click" name="hamburger-click"> <!-- Used to be able to use click for CSS-->
+			<input type="checkbox" id="languages-click" name="languages-click">
+			<label id="hamburger-label" for ="hamburger-click">
+				<span id="hamburger" class="picto icon-menu"></span>
+				<span id="cross" class="picto icon-cross"></span>
+			</label>
+			<div id="container-mobile-logo">
+				<a id="logo-mobile" class="discreet-link" href="#top"><img alt="Logo of PortFolio" src="img/nav-logo.png"/> </a>
+			</div>
+			<a id="logo-desktop" class="discreet-link" href="#top">Manuel's PortFolio</a>
+			<ul id="main-menu"> 
+				<li> <a class="discreet-link" href="#about" >About</a>
+					<svg>
+						<line class="right-mobile" x1="0" x2="100%" y1="0" y2="0"></line>
+					</svg>
+				</li>
+				<li> <a class="discreet-link" href="#works" >Works</a>
+					<svg>
+						<line class="right-mobile" x1="0" x2="100%" y1="0" y2="0"></line>
+					</svg>
+				</li>
+				<li> <a class="discreet-link" href="#skills">Skills</a>					
+					<svg>
+						<line class="right-mobile" x1="0" x2="100%" y1="0" y2="0"></line>
+					</svg>
+				</li>
+				<li> <a class="discreet-link" href="#hobbies">Hobbies</a>					
+					<svg>
+						<line class="right-mobile" x1="0" x2="100%" y1="0" y2="0"></line>
+					</svg>
+				</li>
+				<li> <a class="discreet-link" href="#contact">Contact</a>					
+					<svg>
+						<line class="right-mobile" x1="0" x2="100%" y1="0" y2="0"></line>
+					</svg>
+				</li>
+				<ul id="dropdown-top">
+					<label for="languages-click">
+						<span class="discreet-link">Languages</span>
+					</label>
+					<div class="dropdown-menu">
+						<ul>
+							<li><a class="discreet-link" href="index-fr.html">Français</a></li>
+							<li><a class="discreet-link" href="index-jp.html">日本語</a></li>
+						</ul>
+					</div>
+				</ul>
+				<label id="circle-up-mobile-container" for="hamburger-click">
+					<span id="close-menu" class="picto icon-circle-up"></span>
+				</label>
+			</ul> 
+			<svg id="bottomnav">
+				<line class="right" x1="0" x2="100%" y1="0" y2="0"></line>
+			</svg>
+			
+		</nav>
+		
+	</header>
+	
+	<main>
+		
+		<div class="noscript">	<!-- noscript tag has div to be able to style it-->
+			<noscript>Activate Javascript or disable script blocker to see all the content of the portfolio which is the best experience in the world ! Don't worry, no ads here.</noscript>
+		</div>
+		
+		<section id="top">
+			
+			<div id="top-creator">
+				
+				<div id="presentation">
+					<h1>Web Developer</h1>
+				</div>
+				
+				<p>"I thought that if I put a quote here I can be like an important person"</p>
+				
+				<p id="scroll-down">Scroll <span class="icon-arrow-down2"></span></p>
+				
+			</div>
+				
+		</section>
+		
+		<section id="about">
+			
+			<h2>About me</h2>
+			
+			<div id="about-describe">
+				
+				<p>This Portfolio will inform you about my works, my hobbies and what my skills looks like. </p>
+				<p>That's my portfolio's goal : to explain as close as possible in short words, what I am, what I do and what I like.</p>
+				<p>I'm Manuel from France, currently freelancer, I have a Bachelor's Degree in Web Development and 3 years of professional experiences in making website as a web developer. </p>
+				<p>Do not hesitate to see the portfolio source code (mostly in the CSS and JS files) : I tried to do many different things on it to vary the code.</p>
+			
+			</div>
+				
+		</section>
+		
+		<section id="works">
+			
+			<h2>About my works</h2>
+			
+			<div id="works-container">
+			
+				<div id="works-introduction">
+				
+					<p>This part is about my previous works. You will see what I've done entirely by myself. So please, just take a look. </p>	
+					<p>If you have any question regarding to one of my work, feel free to contact me. </p>					
+				
+				</div>
+				
+				<div id="all-works-container">
+				
+					<div class="work-container"> 
+						
+						<div class="work-title"> 
+							<h3>Your Site</h3>
+						</div>
+						
+						<div class="work-img"> 
+							<img src="img/works/Your_Site.png" alt="Your Site preview page image" />
+						</div>
+						
+						<div class="work-buttons"> 
+							
+							<div class="button-mobile">
+								<a href="img/works/Your_Site_s20_ultra.jpg" target="_blank">Mobile</a>
+							</div>
+							
+							<div class="button-tablet">
+								<a href="img/works/Your_Site_ipad.jpg" target="_blank">Tablet</a>
+							</div>
+							
+							<div class="button-4k">
+								<a href="img/works/Your_Site_4k.jpg" target="_blank">Desktop 4K</a>
+							</div>
+							
+						</div>
+						
+					</div>
+				
+					<div class="work-container"> 
+						
+						<div class="work-title"> 
+							<h3>JA Assure</h3>
+						</div>
+						
+						<div class="work-img"> 
+							<img src="img/works/JA_Assure.png" alt="JA Assure preview page image" />
+						</div>
+						
+						<div class="work-buttons"> 
+							
+							<div class="button-mobile">
+								<a href="img/works/JA_Assure_s20_ultra.jpg" target="_blank">Mobile</a>
+							</div>
+							
+							<div class="button-tablet">
+								<a href="img/works/JA_Assure_IpadMini.jpg" target="_blank">Tablet</a>
+							</div>
+							
+							<div class="button-4k">
+								<a href="img/works/JA_Assure_4k.jpg" target="_blank">Desktop 4K</a>
+							</div>
+							
+						</div>
+						
+					</div>
+					
+					<div class="work-container"> 
+						
+						<div class="work-title"> 
+							<h3>Liber</h3>
+						</div>
+						
+						<div class="work-img"> 
+							<img src="img/works/Liber.png" alt="Liber preview page image" />
+						</div>
+						
+						<div class="work-buttons"> 
+							
+							<div class="button-mobile">
+								<a href="img/works/Liber_s20_ultra.jpg" target="_blank">Mobile</a>
+							</div>
+							
+							<div class="button-4k">
+								<a href="img/works/Liber_4k.jpg" target="_blank">Desktop 4K</a>
+							</div>
+							
+						</div>
+						
+					</div>
+				
+				</div>
+			</div>
+				
+		</section>
+		
+		<section id="skills">
+			
+			<h2>About my skills</h2>
+			
+			<div class="skills-container">
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/HTML5.png" alt="HTML5 logo" />
+						<span class="skills-how">Put your mouse over it to see the content</span>
+					</div>
+					<h3>HTML</h3>
+					<p><span class="skills-title">Introduction :</span> Skeleton of web pages : this is what HTML is.</p> 
+					<p><span class="skills-title">My experience with it :</span> I use its semantics, tags... and all the latest contents of HTML (HTML5) to build a web page, or applications. I also made Emailing templates for GMail, Outlook... </p>
+					<p><span class="skills-title">What I like about it :</span> the beginning and the first thing you use on a brand-new webpage to make your web project alive. All of that is what I appreciate the most about HTML.</p>
+				</div>
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/css.png" alt="CSS3 logo" />
+						<span class="skills-how">Put your mouse over it to see the content</span>
+					</div>
+					<h3>CSS</h3>
+					<p><span class="skills-title">Introduction :</span> CSS is Used to stylish, customize, modernize, and make a responsive web pages. </p> 
+					<p><span class="skills-title">My experience with it :</span> I use its latest version (CSS3) just like his @Media Queries to set specific CSS content based to width of the device. I also use Flex or CSS similar to adjust responsive complex contents or Grid to display table without specific style... I know all mainly CSS contents. I also used Bootstrap framework at work.</p>
+					<p><span class="skills-title">What I like about it :</span> make a styled website and try to design it more and be happy about the final result.</p>
+				</div>
+				
+			</div>
+			
+			<div class="skills-container">
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/Jquery.png" alt="Jquery logo" />
+						<span class="skills-how">Put your mouse over it to see the content</span>
+					</div>
+					<h3>JQuery</h3>
+					<p><span class="skills-title">Introduction :</span> Used to make web pages dynamic.</p>
+					<p><span class="skills-title">My experience with it :</span> Via many web projects or experiences that I had, I used its functions to automatically create or edit web pages Cookies. Automatically create scripts that add HTML or CSS contents. His animations functions... mainly in web applications at work (but also on normal web pages).</p>
+					<p><span class="skills-title">What I like about it :</span> make, for example an automatic form on a web application to make it more dynamic. That's the thing I appreciate the most.</p>
+				</div>
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/php.png" alt="PHP logo" />
+						<span class="skills-how">Put your mouse over it to see the content</span>
+					</div>
+					<h3>PHP</h3>
+					<p><span class="skills-title">Introduction :</span> Used to create web applications on web servers.</p> 
+					<p><span class="skills-title">My experience with it :</span> I used a lot when I was Web Programmers at work. At the beginning I used PHP without Object-Oriented. Finally, I used OOP with MVC design pattern in the end. Do not hesitate to watch my Gitlab public MVC & OOP little contents. I also used Smarty framework. And also worked on Prestashop CMS and overloaded its classes (by creating some add-ons), to add another back-office menu on the CMS and so interact with new data from the database.</p>
+					<p><span class="skills-title">What I like about it :</span> The fact that to create programs without needing to use software languages. Manipulate data from web application I created with a SQL database via PHP functions.</p>
+				</div>
+				
+			</div>
+			
+			<div class="skills-container">
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/sql.png" alt="SQL logo" />
+						<span class="skills-how">Put your mouse over it to see the content</span>
+					</div>
+					<h3>SQL</h3>
+					<p><span class="skills-title">Introduction :</span> Used to make data requests on web servers for applications.</p> 
+					<p><span class="skills-title">My experience with it :</span> I created requests that adds new/edit/delete... datas/another requests (imbricated ones) at work. I used mainly MySQL but also PostgreSQL and MS-SQL.</p>
+					<p><span class="skills-title">What I like about it :</span> Manipulate data to link it to web program and interact with...</p>
+				</div>
+				
+				<div class="skills-child montage">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/photoshop.png" alt="Photoshop logo" />
+						<span class="skills-how">Put your mouse over it to see the content</span>
+					</div>
+					<img id="montage" alt="Friend of mine's montage of me" src="img/film.jpg" />
+					<h3>Adobe Photoshop - Photofiltre</h3>
+					<p><span class="skills-title">Introduction :</span> Used to create / edit pictures.</p> 
+					<p><span class="skills-title">My experience with it :</span> I used it to extract portion of the elements of PSD files from designers to use them for making a web page at work. Create Wireframes. And also for making a montage of people that I know for fun : using tools like eraser, creation of multiple layers...</p>
+					<p><span class="skills-title">What I like about it :</span> nothing special, but it's always fun to be on the film's poster or friends on it.</p>
+				</div>
+				
+			</div>
+			
+			<div class="skills-container">
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/powershell-logo.png" alt="Powershell logo" />
+						<span class="skills-how">Put your mouse over it to see the content</span>
+					</div>
+					<h3>Microsoft Powershell - MS-DOS</h3>
+					<p><span class="skills-title">Introduction :</span> Used to make scripts for Microsoft Windows.</p> 
+					<p><span class="skills-title">My experience with it :</span> Used its functions. I created some scripts for games that they only planned for QWERTY keyboards to AZERTY ones. Changing regedit values to change game option values...</p>
+					<p><span class="skills-title">What I like about it :</span> making scripts that are easy to use without using softwares to download. And understanding how Windows values are set.</p>
+				</div>
+				
+				<div class="skills-child">
+					<svg>
+						<line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+						<line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+						<line class="right" y2="100%" y1="0" x2="100%" x1="100%"></line>
+						<line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+					</svg>
+					<div class="container-hover">
+						<img class="skill-logo" src="img/microsoft-office.png" alt="Microsoft Office logo" />
+						<span class="skills-how">Put your mouse over it to see the content</span>
+					</div>
+					<h3>Microsoft Word - Microsoft Excel - Microsoft Powerpoint</h3>
+					<p><span class="skills-title">Introduction :</span> used to create office documents.</p> 
+					<p><span class="skills-title">My experience with it :</span> at home, at school, at work... I used them everywhere for many projects.</p>
+					<p><span class="skills-title">What I like about it :</span> nothing special, but very useful.</p>
+				</div>
+				
+			</div>
+				
+		</section>
+		
+		<section id="hobbies">
+			
+			<h2>About my Hobbies</h2>
+			
+			<div id="hobbies-background">
+			
+				<div id="hobbies-container">
+
+					<div class="hobbies-fullsized">
+						
+						<div class="hobbies hobbies-left">
+							<div class="hobbies-picto-container">
+								<span id="videogames" class="picto icon-pacman"></span>
+							</div>
+							<div class="hobbies-description-container">
+								<h3>Playing Video-Games</h3>
+								<p class="hobbies-description">I play Video Games since 5. Always interested about discovering new games. I played around 3000 games split through around 30 different systems. </p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-right">
+							<div class="hobbies-description-container">
+								<h3>Watching Movies / TV-Shows / Online Videos</h3>
+								<p class="hobbies-description">Saw almost all biggest classics movies. Some most famous TV-Shows. Many Youtube videos divided into health, sciences, space, history, video games, travel and worldwide cultural differences.</p>
+							</div>
+							<div class="hobbies-picto-container">
+								<span id="video" class="picto icon-film"></span>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-left">
+							<div class="hobbies-picto-container">
+								<span id="writing" class="picto icon-pencil"></span>
+							</div>
+							<div class="hobbies-description-container">
+								<h3>Writing</h3>
+								<p class="hobbies-description">I wrote and still write some ideas and story when my inspiration rise in my head.</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-right">
+							<div class="hobbies-description-container">
+								<h3>Web Coding</h3>
+								<p class="hobbies-description">My student speciality, my job. All started because of my curiosity of "how computer's works". This revolutionary hobbie that makes every virtual thing possible.</p>
+							</div>
+							<div class="hobbies-picto-container">
+								<span id="coding" class="picto icon-html-five"></span>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-left">
+							<div class="hobbies-picto-container">
+								<span id="english" class="picto icon-coin-dollar"></span>
+							</div>
+							<div class="hobbies-description-container">
+								<h3>Learning English</h3>
+								<p class="hobbies-description">Very useful for many things that I like. I have a conversational/professional level. Most of my level now comes from all my hobbies.</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-right">
+							<div class="hobbies-description-container">
+								<h3>Learning Japanese</h3>
+								<p class="hobbies-description"><!--Want to work there, need to talk there.--> I have a basic level like : Kana, some words/Kanji, all particles...</p>
+							</div>
+							<div class="hobbies-picto-container">
+								<span id="japanese" class="picto icon-coin-yen"></span>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-left">
+							<div class="hobbies-picto-container">
+								<span id="travel" class="picto icon-airplane"></span>
+							</div>
+							<div class="hobbies-description-container">
+								<h3>Traveling</h3>
+								<p class="hobbies-description">Spent almost all west European countries and Japan now. And this is not over. <!--Do not hesitate to see my new Instagram profile.--></p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="hobbies-fullsized">
+
+						<div class="hobbies hobbies-right">
+							<div class="hobbies-description-container">
+								<h3>Taking photos</h3>
+								<p class="hobbies-description">Most of the time when I traveled. I also like to use Adobe Lightroom.</p>
+							</div>
+							<div class="hobbies-picto-container">
+								<span id="photos" class="picto icon-camera"></span>
+							</div>
+						</div>
+
+					</div>
+
+				</div>	
+				
+			</div>
+			
+		</section>
+		
+		<section id="contact">
+			
+			<h2>Contact me</h2>
+	
+			<div class="contact-introduction">
+				
+				<p>You want to contact me ? You have a question ? You have a professional proposal to me ? You don't like my way to code ? You think that my portfolio is too awesome but you can't express your emotion to me ? You don't like my humor ? You think that my website is too dark ? My photo on the top of this portfolio scared you ?</p>  
+				<p>Now you can tell me by choosing one of the means of communication just below :</p> 
+				
+			</div>
+			
+			<div class="contact-socials">
+				
+				<a href="mailto:%6D%61%6E%75%65%6C%69%6E%74%68%65%77%65%62%40%67%6D%61%69%6C%2E%63%6F%6D" class="ico-social icon-mail4"></a> <!-- encrypted mail -->
+				<!-- <a href="https://www.instagram.com/" target="_blank" class="ico-social icon-instagram"></a> -->
+				<a href="https://gitlab.com/M.A" target="_blank" class="ico-social icon-gitlab"></a>
+				 
+			</div>
+			
+		</section>
+		
+	</main>
+	
+<footer>
+	
+	<div id="footer-content"><span id="date"></span> - All Rights reserved</div>
+
+</footer>
+
+</body>
+
+</html>

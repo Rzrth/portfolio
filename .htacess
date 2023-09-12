@@ -1,0 +1,19 @@
+order deny,allow
+deny from all
+allow from 127.0.0.1
+
+<Files ~ "^\.htaccess">
+Order allow,deny
+Deny from all
+</Files>
+
+<Files robots.txt">
+Order allow,deny
+Deny from all
+</Files>
+
+<Files sitemap.xml">
+Order allow,deny
+Deny from all
+</Files>
+

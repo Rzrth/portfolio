@@ -427,12 +427,12 @@ section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsiz
 	position: relative;
 }
 
-section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:first-of-type:lang(en),
-section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:first-of-type:lang(fr){
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:last-of-type:lang(en),
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:last-of-type:lang(fr){
 	font-family: PressStart2P;
 }
 
-section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:first-of-type:lang(ja){
+section#hobbies div#hobbies-background div#hobbies-container div.hobbies-fullsized:last-of-type:lang(ja){
 	font-family: inherit;
 }
 
